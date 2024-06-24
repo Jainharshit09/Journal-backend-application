@@ -19,7 +19,7 @@ JournalEntryService {
     @Autowired
     private UserService userService;
 
-//    @Transactional
+    @Transactional
     public void saveEntry(JournalEntry journalEntry, String username){
         User user = userService.findByUsername(username);
         JournalEntry save = JournalEntryRepository.save(journalEntry);
